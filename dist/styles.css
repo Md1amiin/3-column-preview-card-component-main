@@ -49,4 +49,73 @@ input, button, textarea, select {
 */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: hsl(0deg, 0%, 95%);
+}
+body .cars {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 88.5%;
+  height: 88%;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .cars .carType {
+  line-height: 1.7;
+  height: 33.3%;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  display: flex;
+  flex-direction: column;
+  padding: 1.9rem;
+  gap: 0.8rem;
+}
+body .cars .carType .carIcon {
+  width: 2.4rem;
+  height: 1.5rem;
+}
+body .cars .carType .carName {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 1.5rem;
+  color: hsl(0deg, 0%, 95%);
+  text-transform: uppercase;
+}
+body .cars .carType .carDetails {
+  font-size: 0.55rem;
+}
+body .cars .carType .learnMoreBtn {
+  text-transform: capitalize;
+  font-size: 0.6rem;
+  text-align: center;
+  width: 5.3rem;
+  height: 1.8rem;
+  background-color: hsl(0deg, 0%, 95%);
+  text-decoration: none;
+  padding: 0.4rem;
+  border-radius: 2rem;
+}
+body .cars .sedans {
+  background-color: hsl(31deg, 77%, 52%);
+}
+body .cars .sedans .learnMoreBtn {
+  color: hsl(31deg, 77%, 52%);
+}
+body .cars .suvs {
+  background-color: hsl(184deg, 100%, 22%);
+}
+body .cars .suvs .learnMoreBtn {
+  color: hsl(184deg, 100%, 22%);
+}
+body .cars .luxury {
+  background-color: hsl(179deg, 100%, 13%);
+}
+body .cars .luxury .learnMoreBtn {
+  color: hsl(179deg, 100%, 13%);
 }/*# sourceMappingURL=styles.css.map */
