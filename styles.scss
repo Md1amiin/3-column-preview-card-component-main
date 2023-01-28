@@ -61,9 +61,6 @@
   $fw-regular: 400;
   $fw-bold: 700;
 
-  @mixin border {
-    border: 1px solid red;
-  }
 
   body {
     font-family: $font-family-1;
