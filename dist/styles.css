@@ -92,12 +92,12 @@ body .cars .carType .carDetails {
 }
 body .cars .carType .learnMoreBtn {
   text-transform: capitalize;
-  font-size: 0.6rem;
+  font-size: 0.95rem;
   text-align: center;
-  width: 9.2rem;
+  width: 9.5rem;
   background-color: hsl(0deg, 0%, 95%);
   text-decoration: none;
-  padding: 1.1rem;
+  padding: 0.95rem;
   border-radius: 2rem;
 }
 body .cars .sedans {
