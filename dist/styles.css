@@ -116,7 +116,7 @@ body .cars .carType .learnMoreBtn {
 }
 @media screen and (min-width: 600px) {
   body .cars .carType .learnMoreBtn {
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
 }
 body .cars .carType .learnMoreBtn:hover {
