@@ -1,7 +1,7 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+*, *::before, *::after, *:hover {
   box-sizing: border-box;
 }
 
@@ -67,15 +67,28 @@ body .cars {
   border-radius: 0.3rem;
   overflow: auto;
 }
+@media screen and (min-width: 600px) {
+  body .cars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    width: 65%;
+    height: 33rem;
+  }
+}
 body .cars .carType {
   line-height: 1.7;
-  height: 33.3%;
   color: hsla(0deg, 0%, 100%, 0.75);
   display: flex;
   flex-direction: column;
   overflow: auto;
   padding: 2.9rem;
   gap: 1.2rem;
+}
+@media screen and (max-width: 600px) {
+  body .cars .carType {
+    height: 33.3%;
+  }
 }
 body .cars .carType .carIcon {
   width: 4.4rem;
@@ -88,11 +101,12 @@ body .cars .carType .carName {
   text-transform: uppercase;
 }
 body .cars .carType .carDetails {
-  font-size: 0.95rem;
+  font-size: 0.975rem;
 }
 body .cars .carType .learnMoreBtn {
+  display: inline-block;
   text-transform: capitalize;
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-align: center;
   width: 9.5rem;
   background-color: hsl(0deg, 0%, 95%);
@@ -100,11 +114,23 @@ body .cars .carType .learnMoreBtn {
   padding: 0.95rem;
   border-radius: 2rem;
 }
+@media screen and (min-width: 600px) {
+  body .cars .carType .learnMoreBtn {
+    margin-top: 2rem;
+  }
+}
+body .cars .carType .learnMoreBtn:hover {
+  color: hsla(0deg, 0%, 100%, 0.75);
+  border: 2px solid hsla(0deg, 0%, 100%, 0.75);
+}
 body .cars .sedans {
   background-color: hsl(31deg, 77%, 52%);
 }
 body .cars .sedans .learnMoreBtn {
   color: hsl(31deg, 77%, 52%);
+}
+body .cars .sedans .learnMoreBtn:hover {
+  background-color: hsl(31deg, 77%, 52%);
 }
 body .cars .suvs {
   background-color: hsl(184deg, 100%, 22%);
@@ -112,9 +138,15 @@ body .cars .suvs {
 body .cars .suvs .learnMoreBtn {
   color: hsl(184deg, 100%, 22%);
 }
+body .cars .suvs .learnMoreBtn:hover {
+  background-color: hsl(184deg, 100%, 22%);
+}
 body .cars .luxury {
   background-color: hsl(179deg, 100%, 13%);
 }
 body .cars .luxury .learnMoreBtn {
   color: hsl(179deg, 100%, 13%);
+}
+body .cars .luxury .learnMoreBtn:hover {
+  background-color: hsl(179deg, 100%, 13%);
 }/*# sourceMappingURL=styles.css.map */

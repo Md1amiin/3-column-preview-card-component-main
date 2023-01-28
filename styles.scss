@@ -2,7 +2,7 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+*, *::before, *::after, *:hover {
     box-sizing: border-box;
   }
   /*
@@ -83,9 +83,19 @@
         border-radius: 0.3rem;
         overflow: auto;
 
+        @media screen and (min-width: 600px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
+            width: 65%;
+            height: 33rem;
+        }
+
         .carType {
             line-height: 1.7;
-            height: 33.3%;
+            @media screen and (max-width: 600px) {
+                height: 33.3%;
+            }
             color: $neutral-color-white;
             display: flex;
             flex-direction: column;
@@ -106,36 +116,53 @@
             }
 
             .carDetails {
-                font-size: 0.95rem;
+                font-size: 0.975rem;
             }
 
             .learnMoreBtn {
+                display: inline-block;
                 text-transform: capitalize;
-                font-size: 0.95rem;
+                font-size: 1rem;
                 text-align: center;
                 width: 9.5rem;
                 background-color:$neutral-color-very-light-gray;
                 text-decoration: none;
                 padding: 0.95rem;
                 border-radius: 2rem;
+                @media screen and (min-width: 600px) {
+                     margin-top: 2rem;
+                }
+                &:hover {
+                    color: $neutral-color-white;
+                    border: 2px solid $neutral-color-white;
+                }
             }
         }
         .sedans {
             background-color: $primary-color-bright-orange;
             .learnMoreBtn {
                 color: $primary-color-bright-orange;
+                &:hover {
+                    background-color: $primary-color-bright-orange;
+                }
             }
         }
         .suvs {
             background-color: $primary-color-dark-cyan;
             .learnMoreBtn {
                 color: $primary-color-dark-cyan;
+                &:hover {
+                    background-color: $primary-color-dark-cyan;
+                }
             }
         }
         .luxury {
             background-color: $primary-color-very-dark-cyan;
             .learnMoreBtn {
                 color: $primary-color-very-dark-cyan;
+                &:hover {
+                    background-color: $primary-color-very-dark-cyan;
+                }
             }
         }
     }
